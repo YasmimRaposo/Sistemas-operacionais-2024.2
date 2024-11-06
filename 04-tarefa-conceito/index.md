@@ -13,40 +13,59 @@
 
 ## Respostas dos exercícios
 
-**1. Quais os dois principais objetivos de um sistema operacional?**
+## Questões sobre Sistemas Operacionais
 
-**2. Por que a abstração de recursos é importante para os desenvolvedores de aplicações? Ela tem alguma utilidade para os desenvolvedores do próprio sistema operacional?**
+### 1. O que significa time-sharing e qual a sua importância em um sistema operacional?<br>
+Significa compartilhamento de tempo. Desse modo, o time-sharing maximiza o uso do recursos ao definir um prazo de processamento.<br>
 
-**3. A gerência de tarefas permite compartilhar o processador, executando mais de uma aplicação ao mesmo tempo. Identifique as principais vantagens trazidas por essa funcionalidade e os desafios a resolver para implementá-la.**
+### 2. Como e com base em que critérios é escolhida a duração de um quantum de processamento?<br>
+A duração do quantum depende muito do tipo de sistema operacional e a partir disso os criterios incluem tempo de resposta, eficiência e tipo de aplicação. <br>
+### 3. Considerando o diagrama de estados dos processos apresentado na figura a seguir, complete o diagrama com a transição de estado que está faltando (t6) e apresente o significado de cada um dos estados e transições.<br>
+![image](https://github.com/user-attachments/assets/5309ae06-9a34-4787-a4c5-d8bf79fa6ad9)
 
-**4. O que caracteriza um sistema operacional de tempo real? Quais as duas classificações de sistemas operacionais de tempo real e suas diferenças?**
 
-**5. Relacione as afirmações aos respectivos tipos de sistemas operacionais: distribuído (D), multi-usuário (M), desktop (K), servidor (S), embarcado (E) ou de tempo-real (T):** <br>
- [ ] Deve ter um comportamento temporal previsível, com prazos de resposta
-claramente definidos. <br>
-[ ] Sistema operacional usado por uma empresa para executar seu banco de
-dados corporativo. <br>
-[ ] São tipicamente usados em telefones celulares e sistemas eletrônicos
-dedicados. <br>
-[ ] Neste tipo de sistema, a localização física dos recursos do sistema computacional é transparente para os usuários. <br>
-[ ] Todos os recursos do sistema têm proprietários e existem regras controlando
-o acesso aos mesmos pelos usuários. <br>
-[ ] A gerência de energia é muito importante neste tipo de sistema. <br>
-[ ] Sistema que prioriza a gerência da interface gráfica e a interação com o
-usuário. <br>
-[ ] Construído para gerenciar de forma eficiente grandes volumes de recursos. <br>
-[ ] O MacOS X é um exemplo típico deste tipo de sistema. <br>
-[ ] São sistemas operacionais compactos, construídos para executar aplicações
-específicas sobre plataformas com poucos recursos. <br>
+Nova E1: A tarefa está sendo criada e carregada em memória.
 
-**6. Sobre as afirmações a seguir, relativas aos diversos tipos de sistemas operacionais, indique quais são incorretas, justificando sua resposta:**
+Nova -> Pronto(t5): a tarefa termina de ser carregada em memória.
 
-**(a) Em um sistema operacional de tempo real, a rapidez de resposta é menos
-importante que a previsibilidade do tempo de resposta.** <br>
-**(b) Um sistema operacional multi-usuários associa um proprietário a cada
-recurso do sistema e gerencia as permissões de acesso a esses recursos.** <br>
-**(c) Nos sistemas operacionais de rede a localização dos recursos é transparente
-para os usuários.** <br>
-**(d) Um sistema operacional de tempo real deve priorizar as tarefas que interagem com o usuário.** <br>
-**(e) Um sistema operacional embarcado é projetado para operar em hardware
-com poucos recursos.**<br>
+Pronta E5 -> A tarefa está em memória, aguardando o processador.
+
+Pronto -> Executando(t4): A transição ocorre quando a tarefa é escolhida pelo escalonador para ser executado.
+
+Executando E3 -> A tarefa está sendo executada pelo processador.
+
+Executando -> Suspensa(t2): O processo passa para espera enquanto aguarda a conclusão de um evento solicitado. Geralmente, acontece quando um recurso não está disponível.
+
+Suspensa E4 -> A tarefa está aguardando dados externos ou sincronização.
+
+Suspensa -> Pronto(t3): O processo passa para pronto quando solicitado e atendido ou o recurso esperado é concedido.
+
+Executando → Terminada(t1): ocorre quando a tarefa encerra sua execução
+
+Terminada E2 -> A tarefa foi concluída e pode ser removida da memória.
+
+### 4. Indique se cada uma das transições de estado de tarefas a seguir definidas é possível ou não. Se a transição for possível, dê um exemplo de situação na qual ela ocorre (N: Nova, P: Pronta, E: Executando, S: Suspensa, T: Terminada).
+
+- **E → P**: Possível. Exemplo: quando a tarefa executando atinge o limite de tempo do quantum de processamento<br>
+- **E → S**: Possível.  Exemplo: quando a tarefa em execução solicita um recurso indisponível no momento
+- **S → E**: Não possível. 
+- **P → N**: Não possível. 
+- **S → T**: Possível. Exemplo: a tarefa em estado suspenso possui um erro ou é forçada a encerrar sua execução por conta de um comando do sistema.
+- **E → T**: Possível. Exemplo: a tarefa completa sua execução ou é encerrada por conta de erro.
+- **N → S**: Não é possível.
+- **P → S**: Não é possivel.
+
+### 5. Relacione as afirmações abaixo aos respectivos estados no ciclo de vida das tarefas (N: Nova, P: Pronta, E: Executando, S: Suspensa, T: Terminada):
+
+- [ N ] O código da tarefa está sendo carregado.
+- [ P ] As tarefas são ordenadas por prioridades.
+- [ E ] A tarefa sai deste estado ao solicitar uma operação de entrada/saída.
+- [ T ] Os recursos usados pela tarefa são devolvidos ao sistema.
+- [ P ] A tarefa vai a este estado ao terminar seu quantum. 
+- [ P ] A tarefa só precisa do processador para poder executar.
+- [ ? ] O acesso a um semáforo em uso pode levar a tarefa a este estado.
+- [ E ] A tarefa pode criar novas tarefas.
+- [ E ] Há uma tarefa neste estado para cada processador do sistema.
+- [ S ] A tarefa aguarda a ocorrência de um evento externo.
+
+
