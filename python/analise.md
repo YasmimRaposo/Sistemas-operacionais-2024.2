@@ -1,4 +1,6 @@
 # Experimentos com Servidor HTTP
+- **Aluno**: [Yasmim Fernandes de oliveira Raposo](https://github.com/YasmimRaposo)
+- Matrícula: 20231014040007
 #### Cenários:
 - Apenas 1 cliente
 - 2 clientes simultâneos
