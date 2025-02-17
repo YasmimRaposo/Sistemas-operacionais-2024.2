@@ -1,11 +1,4 @@
 # Experimentos com Servidor HTTP
-
-## Configurações dos Experimentos
-
-### 1. Servidor HTTP sem Thread
-1. Executar o servidor HTTP sem thread, código abaixo (subseção 2.1).
-2. Executar cliente, código abaixo (subseção 2.3).
-
 #### Cenários:
 - Apenas 1 cliente
 - 2 clientes simultâneos
@@ -13,17 +6,7 @@
 - 10 clientes simultâneos
 
 #### Análise:
-- Analisar e explicar o comportamento do cliente e do servidor sem thread para cada um dos 4 casos acima.
-
-### 2. Servidor HTTP com Thread
-1. Parar o servidor sem thread e executar o servidor HTTP com thread, código abaixo (subseção 2.2).
-2. Executar cliente, código abaixo (subseção 2.3).
-
-#### Cenários:
-- Apenas 1 cliente
-- 2 clientes simultâneos
-- 5 clientes simultâneos
-- 10 clientes simultâneos
+- Analisar e explicar o comportamento do cliente e do servidor sem thread e com Threads para cada um dos 4 casos acima.
 
 #### Análise:
 - Analisar e explicar o comportamento do cliente e do servidor com thread para cada um dos 4 casos acima.
