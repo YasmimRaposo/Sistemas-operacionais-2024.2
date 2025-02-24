@@ -21,7 +21,7 @@ Qual o motivo da visita?
 Entender o papel essencial da DIGTI na modernização da infraestrutura de TI do IFRN é fundamental, especialmente ao analisar, por meio do datacenter, aspectos como a estrutura física e os desafios ligados à sua manutenção.
 
 ## Descrevendo a visita
-### Infraestrutura do Datacenter  
+### Visita ao datacenter  
 
 Durante a visita ao Datacenter, foi possível compreender os principais aspectos técnicos e operacionais que sustentam os serviços digitais do IFRN.  
 
@@ -38,15 +38,16 @@ Durante a visita ao Datacenter, foi possível compreender os principais aspectos
 #### Virtualização 
 - O uso de máquinas virtuais permite maior flexibilidade na alocação de recursos computacionais.  
 
-### Estrutura e Funcionamento da DIGTI  
+### Visita à DIGTI
 
-A DIGTI é responsável pelo planejamento e execução das ações de TI no IFRN, organizando-se em quatro pilares fundamentais, atualmente em revisão:  
+**A DIGTI desempenha um papel estratégico na gestão da tecnologia da informação do IFRN, estruturando suas ações em quatro áreas principais:** 
 
-- **Sistemas de Informação**: Gerencia o desenvolvimento, manutenção e integração das plataformas institucionais, incluindo o SUAP (Sistema Unificado de Administração Pública), que teve origem como um sistema para controle de almoxarifado e registro de ponto.  
-- **Infraestrutura e Operações de TIC**: Supervisiona a rede, servidores e demais recursos essenciais para garantir a estabilidade dos serviços de TI.  
-- **Segurança da Informação**: Atua na implementação e aprimoramento das políticas de proteção de dados e sistemas, garantindo a integridade e confidencialidade das informações.  
-- **Governança e Gestão de TIC**: Define estratégias, diretrizes e normas para alinhar a tecnologia às necessidades institucionais, em conformidade com o planejamento estratégico do IFRN.
-
+- **Sistemas de Informação**: Responsável pelo desenvolvimento, atualização e integração das plataformas institucionais, como o SUAP.  
+- **Infraestrutura**: Administra redes, servidores e demais componentes tecnológicos essenciais para garantir a operação estável dos serviços de TI.  
+- **Segurança da Informação**: Foca na implementação e aprimoramento de políticas voltadas à proteção de dados e à integridade dos sistemas.  
+- **Governança**: Estabelece diretrizes estratégicas para alinhar as soluções tecnológicas aos objetivos institucionais, em conformidade com o planejamento do IFRN.
+  
+#### Informações adicionais da visita à diretoria:
 Além disso, durante a visita à DIGTI, discutiu-se a evolução do SUAP (Sistema Unificado de Administração Pública). O sistema é um dos principais exemplos da complexidade enfrentada. Inicialmente criado como um sistema para o controle de almoxarifado e ponto eletrônico, ele evoluiu para uma plataforma completa de gestão acadêmica e administrativa. Com essa expansão, a sua manutenção tornou-se cada vez mais desafiadora, exigindo atualizações constantes, integração com novos sistemas e um suporte técnico especializado. A experiência do IFRN mostra que sistemas personalizados não apenas oferecem maior controle sobre funcionalidades e segurança, mas também podem ser adaptados para novos usos e até mesmo compartilhados com outras entidades. Hoje, o suap é utilizado por cerca de 78 conveniadas, sendo elas Institutos e órgãos de todo o Brasil.    
 
 ### Considerações Finais  
