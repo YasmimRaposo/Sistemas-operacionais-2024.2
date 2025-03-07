@@ -21,8 +21,8 @@
 
 ### Aluno
 
-- nome: 
-- matrícula: 
+- nome: [Yasmim Fernandes de Oliveira Raposo](https://github.com/YasmimRaposo/Sistemas-operacionais-2024.2)
+- matrícula: 20231014040007
 
 ### Relato
 
