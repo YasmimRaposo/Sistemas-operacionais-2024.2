@@ -26,7 +26,20 @@ Permissões de Acesso e Recursos Utilizados: Informações sobre memória alocad
 
 ![image](https://github.com/user-attachments/assets/9e434c9d-5d03-45a5-b599-471916c3fff7)
 
-(AVALIANDO EXECUÇÃO)
+1. O programa começa com `x = 0`.  
+2. A função `fork()` cria novos processos. No total, quatro processos são gerados ao final.  
+3. Cada processo incrementa `x++`, pausando com `sleep(5)` e usando `wait(0)` para sincronização.  
+4. No final, todos os processos imprimem `x = 2`.  
+
+**Saída Final**:
+```
+Valor de x: 2
+Valor de x: 2
+Valor de x: 2
+Valor de x: 2
+```
+
+O tempo total estimado de execução do programa é de 10 segundos, resultado de duas chamadas sleep(5) em todos os processos, enquanto as chamadas wait() garantem a sincronização entre pai e filhos
 
 ### **3. Indique quantas letras “X” serão impressas na tela pelo programa abaixo quando for executado com a seguinte linha de comando: “a.out 4 3 2 1”. O comando a.out resulta da compilação do programa a seguir:**<br>
 ![image](https://github.com/user-attachments/assets/f43951f1-6cdc-4902-b2a3-cc77b77a5558)
