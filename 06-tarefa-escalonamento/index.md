@@ -29,7 +29,54 @@ Jogos Multiplayer: Em um servidor de jogos multiplayer, cada jogador recebe uma 
 
 ### **02. Considere um sistema de tempo compartilhado com valor de quantum tq e duração da troca de contexto ttc. Considere tarefas de entrada/saída que usam em média p% de seu quantum de tempo cada vez que recebem o processador. Defina a eficiência E do sistema como uma função dos parâmetros tq, ttc e p. A eficiência E mede o uso efetivo do processador comparado ao tempo total, incluindo trocas de contexto. A eficiência é:**
 
-[...]
+## Explicação do copilot:<br>
+
+**Entendendo a Eficiência \(E\) em Sistemas de Tempo Compartilhado**
+
+A eficiência \(E\) mede o uso produtivo do processador em comparação com o tempo total, incluindo trocas de contexto.
+
+**Fórmula**
+\[
+E = \frac{tq \cdot (1 - p/100)}{tq + ttc}
+\]
+
+**Onde:**
+- \(tq\): Quantum de tempo alocado para cada processo.
+- \(ttc\): Tempo gasto na troca de contexto.
+- \(p\): Percentual do quantum gasto em entrada/saída.
+
+---
+
+### **Explicação**
+1. **Numerador** (\(tq \cdot (1 - p/100)\)):
+   - Representa o tempo efetivo que o processador utiliza para tarefas úteis.
+   - \((1 - p/100)\) ajusta o quantum disponível, removendo o tempo dedicado às operações de I/O.
+
+2. **Denominador** (\(tq + ttc\)):
+   - Inclui o tempo total que o processador dedica, somando o quantum disponível e o tempo gasto nas trocas de contexto.
+
+---
+#### **Exemplo 1**:
+**Parâmetros**:
+- \(tq = 10ms\), \(ttc = 2ms\), \(p = 20\%\).
+
+**Cálculo**:
+- Tempo útil: \(10 \cdot (1 - 0,2) = 8ms\).
+- Tempo total: \(10 + 2 = 12ms\).
+- Eficiência:
+\[
+E = \frac{8}{12} = 0,666 \, (ou \, 66,6\%)
+\]
+
+---
+
+### **Fatores que Influenciam a Eficiência**
+1. **Quantum maior (\(tq\))**:
+   - Aumenta a eficiência, pois reduz o impacto relativo do \(ttc\).
+2. **Troca de contexto lenta (\(ttc\))**:
+   - Diminui a eficiência, já que mais tempo é desperdiçado.
+3. **Percentual alto de I/O (\(p\))**:
+   - Reduz a eficiência, pois mais tempo do quantum é gasto em operações não produtivas.
 
 ### **03. Explique o que é, para que serve e como funciona a técnica de aging.**<br>
 É uma técnica de (envelhecimento) que aumenta a prioridade da tarefa proporcionalmente ao tempo que ela está aguardando o processador, evitando, assim, a inanição de tarefas de baixa prioridade.
