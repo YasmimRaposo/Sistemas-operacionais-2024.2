@@ -34,14 +34,16 @@
    - A imagem base é a oficial do Python.
    - Instala as dependências do `requirements.txt` e configura o Django para rodar na porta 8000.
 
-   ```Dockerfile
+
+
+```Dockerfile
 FROM python:3.9
 WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-   ```
+```
 
 3. **docker-compose.yml**: O `docker-compose.yml` define os serviços necessários para a aplicação:
 
@@ -80,15 +82,12 @@ webapp'
 - **Acesso à Aplicação**: A aplicação Django foi acessada no navegador por meio do docker run -p 8000:8000 django-app
 
 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](image.png) ![alt text](image-1.png)
 ![alt text](image-3.png)
 
 - djangoproject-db-1: Este é o contêiner que está rodando o PostgreSQL. Ele está escutando na porta 5432 dentro do contêiner, e a porta 5433 foi mapeada para o seu localhost. Ou seja, você pode acessar o banco de dados PostgreSQL em localhost:5433.
 
 - djangoproject-webapp-1: Este é o contêiner do Django. Ele está rodando na porta 8000 dentro do contêiner, e a porta 8001 foi mapeada para o seu localhost. Ou seja, você pode acessar a aplicação Django em localhost:8001.
-
-![alt text](image-2.png)
 
 
 ### Conclusão
