@@ -100,4 +100,24 @@ Resposta:(N:M)<br>
 ### **8.Considerando as implementações de threads N:1 e 1:1 para o trecho de código a seguir, a) desenhe os diagramas de execução, b) informe as durações aproximadas de execução e c) indique a saída do programa na tela. Considere a operação sleep() como uma chamada de sistema (syscall). A chamada thread_create cria uma nova thread, thread_exit encerra a thread corrente e thread_join espera o encerramento da thread informada como parâmetro**
 ![image](https://github.com/user-attachments/assets/18f1c8a7-4461-4677-a1d3-2ee85c024020)
 
-(AVALIAR)
+Explicação gemini:
+
+O código cria threads tA, tB e tC, executando threadBody (incrementa x, dorme, imprime x e y).
+
+Implementação N:1
+Execução: Sequencial, uma thread por vez.
+Duração: ~32 unidades de tempo.
+Saída:
+x: 1, y: 1
+x: 1, y: 2
+x: 1, y: 3
+Implementação 1:1
+Execução: Threads concorrentes.
+Duração: ~13 unidades de tempo.
+Saída: (Ordem variável)
+x: 1, y: 1
+x: 1, y: 2
+x: 1, y: 3
+Observações
+y é global, x é local.
+N:1 é mais lento, 1:1 é mais rápido devido à concorrência.
