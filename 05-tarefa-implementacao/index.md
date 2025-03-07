@@ -42,9 +42,10 @@ Valor de x: 2
 O tempo total estimado de execução do programa é de 10 segundos, resultado de duas chamadas sleep(5) em todos os processos, enquanto as chamadas wait() garantem a sincronização entre pai e filhos
 
 ### **3. Indique quantas letras “X” serão impressas na tela pelo programa abaixo quando for executado com a seguinte linha de comando: “a.out 4 3 2 1”. O comando a.out resulta da compilação do programa a seguir:**<br>
-![image](https://github.com/user-attachments/assets/f43951f1-6cdc-4902-b2a3-cc77b77a5558)
+![image](https://github.com/user-attachments/assets/639a8fdb-4230-4a3a-b39a-f442c2fe8e8c)
 
-(AVALIANDO)
+ERRO DE SEGMENTATION FAULT
+
 
 ### **4. O que são threads e para que servem?**<br>
 
