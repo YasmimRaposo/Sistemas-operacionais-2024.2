@@ -1,18 +1,17 @@
-# Escolhendo a imagem base
+# Usando a imagem base do Python
 FROM python:3.9
 
-# Definindo o diretório de trabalho dentro do container
+# Definir o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Instalando dependências
+# Copiar o arquivo de dependências para o contêiner
 COPY requirements.txt /app/
+
+# Instalar as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiando o código da aplicação para o container
+# Copiar o código da aplicação para o contêiner
 COPY . /app/
 
-# Expondo a porta que o Django vai rodar
-EXPOSE 8000
-
-# Comando para iniciar o servidor do Django
+# Definir o comando de inicialização
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

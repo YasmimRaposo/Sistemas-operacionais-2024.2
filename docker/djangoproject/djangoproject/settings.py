@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "webapp", # adiciono minha aplicação
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,27 @@ WSGI_APPLICATION = "djangoproject.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import os
+from dotenv import load_dotenv
+
+# Carregar variáveis de ambiente do arquivo .env
+load_dotenv()
+
+import os
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'services',         # O nome do banco de dados
+        'USER': 'postgres',          # O usuário do PostgreSQL
+        'PASSWORD': 'postgres',      # A senha do usuário
+        'HOST': 'db',                # Nome do serviço Docker do banco de dados
+        'PORT': '5433',              # porta mapeada no docker-compose
     }
 }
+
+
+
 
 
 # Password validation
