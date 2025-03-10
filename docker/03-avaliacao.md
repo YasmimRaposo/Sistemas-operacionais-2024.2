@@ -85,7 +85,7 @@ webapp'
 ![alt text](image.png) ![alt text](image-1.png)
 ![alt text](image-3.png)
 
-- djangoproject-db-1: Este é o contêiner que está rodando o PostgreSQL. Ele está escutando na porta 5432 dentro do contêiner, e a porta 5433 foi mapeada para o seu localhost. Ou seja, você pode acessar o banco de dados PostgreSQL em localhost:5433.
+- djangoproject-db-1: Este é o contêiner que está rodando o PostgreSQL. Ele está escutando na porta 5432 dentro do contêiner, e a porta 5433 foi mapeada para o seu localhost. 
 
 - djangoproject-webapp-1: Este é o contêiner do Django. Ele está rodando na porta 8000 dentro do contêiner, e a porta 8001 foi mapeada para o seu localhost. Ou seja, você pode acessar a aplicação Django em localhost:8001.
 
