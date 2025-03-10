@@ -14,6 +14,10 @@
 - Analisar e explicar o comportamento do cliente e do servidor com thread para cada um dos 4 casos acima.
 - Se houver diferença no funcionamento dos servidores sem e com threads, analisar a diferença.
 
+## Adições para Análise de Requisições
+
+Para realizar uma análise detalhada do comportamento do servidor e dos clientes, foram adicionadas funcionalidades de medição de tempo no código. Especificamente, o módulo `time` do Python foi utilizado para registrar o tempo de início e fim de cada requisição.
+
 ## Análise dos Resultados
 
 ### Servidor HTTP sem Thread:
@@ -76,4 +80,6 @@
 - Ambos os servidores apresentam tempos de resposta rápidos e eficientes para um pequeno número de clientes.
 - O servidor com thread pode enfrentar problemas de sobrecarga com um grande número de conexões.
 - O servidor sem thread pode apresentar variações na latência com o aumento do número de clientes, mas tende a consumir menos recursos.
+
+> Pra rodar, no terminal digite o servidor que deseja iniciar, "python server_comThread.py" ou "python server_semThread". Posteriormente, em outro terminal digite "python cliente.py"
 
