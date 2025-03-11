@@ -84,6 +84,7 @@ webapp'
 
 ![alt text](image.png) ![alt text](image-1.png)
 ![alt text](image-3.png)
+![Captura de tela 2025-03-11 141018](https://github.com/user-attachments/assets/e99a7d71-4904-47b4-a787-369ce81e68eb)
 
 - djangoproject-db-1: Este é o contêiner que está rodando o PostgreSQL. Ele está escutando na porta 5432 dentro do contêiner, e a porta 5433 foi mapeada para o seu localhost. 
 
